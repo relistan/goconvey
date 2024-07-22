@@ -84,7 +84,7 @@ func monochrome() {
 }
 
 func isColorableTerminal() bool {
-  term := os.Getenv("TERM")
+	term := os.Getenv("TERM")
 	return strings.Contains(term, "color") || strings.Contains(term, "xterm")
 }
 
