@@ -84,7 +84,8 @@ func monochrome() {
 }
 
 func isColorableTerminal() bool {
-	return strings.Contains(os.Getenv("TERM"), "color")
+  term := os.Getenv("TERM")
+	return strings.Contains(term, "color") || strings.Contains(term, "xterm")
 }
 
 // This interface allows us to pass the *testing.T struct
